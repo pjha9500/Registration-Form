@@ -53,24 +53,35 @@
     
 </body>
 <script>
-    function onsignup(event)
-    {
-        // preventing the default behaviour of form  which is like reloading of fo
-        event.preventDefault();
-        // preventing the default behaviour of form  which is like reloading of fo
-        event.preventDefault();
-        localStorage.setItem("Name:", event.target.username.value);
-        localStorage.setItem("Email id:",event.target.useremail.value);
-        localStorage.setItem("Contact:", event.target.userphone.value);
-        localStorage.setItem("Date & Time  :", event.target.callDate.value," ",event.target.callTime.value);
-        // console.log("Name:",event.target.username.value);
-        // console.log("Eamil id:",event.target.useremail.value);
-        // console.log("Contact:",event.target.userphone.value);
-        // console.log("Date:",event.target.callDate.value);
-        // console.log("Time:",event.target.callTime.value);
+    class user {
+  constructor(email, contact, date) {
+    this.email=email;
+    this.contact=contact;
+    this.date = date;
+  }
+}
+     function onsignup(event)
+     {
+
+
+
+    //     // preventing the default behaviour of form  which is like reloading of fo
+    //     event.preventDefault();
+    event.preventDefault();
+    let newuser = new user(event.target.useremail.value, event.target.userphone.value, event.target.callDate.value);
+    localStorage.setItem(event.target.username.value,JSON.stringify(newuser));
+    //     // localStorage.setItem("Name:", event.target.username.value);
+    //     // localStorage.setItem("Email id:",event.target.useremail.value);
+    //     // localStorage.setItem("Contact:", event.target.userphone.value);
+    //     // localStorage.setItem("Date & Time  :", event.target.callDate.value," ",event.target.callTime.value);
+    //     // console.log("Name:",event.target.username.value);
+    //     // console.log("Eamil id:",event.target.useremail.value);
+    //     // console.log("Contact:",event.target.userphone.value);
+    //     // console.log("Date:",event.target.callDate.value);
+    //     // console.log("Time:",event.target.callTime.value);
         
 
-    }
+     }
 
 </script>
 </html>
