@@ -57,11 +57,17 @@
     {
         // preventing the default behaviour of form  which is like reloading of fo
         event.preventDefault();
-        console.log("Name:",event.target.username.value);
-        console.log("Eamil id:",event.target.useremail.value);
-        console.log("Contact:",event.target.userphone.value);
-        console.log("Date:",event.target.callDate.value);
-        console.log("Time:",event.target.callTime.value);
+        // preventing the default behaviour of form  which is like reloading of fo
+        event.preventDefault();
+        localStorage.setItem("Name:", event.target.username.value);
+        localStorage.setItem("Email id:",event.target.useremail.value);
+        localStorage.setItem("Contact:", event.target.userphone.value);
+        localStorage.setItem("Date & Time  :", event.target.callDate.value," ",event.target.callTime.value);
+        // console.log("Name:",event.target.username.value);
+        // console.log("Eamil id:",event.target.useremail.value);
+        // console.log("Contact:",event.target.userphone.value);
+        // console.log("Date:",event.target.callDate.value);
+        // console.log("Time:",event.target.callTime.value);
         
 
     }
